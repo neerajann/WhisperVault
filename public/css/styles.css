@@ -1,0 +1,52 @@
+body {
+  background-color: #ebd5d5;
+}
+
+.centered {
+  padding-top: 200px;
+  text-align: center;
+}
+
+.secret-text {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #000;
+}
+.login-code-btn {
+  background-color: rgb(88, 88, 218);
+  border: none;
+  color: white;
+  margin-top: 5px;
+  padding: 5px 15px;
+  border-radius: 4px;
+}
+.get-code-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.get-code-form {
+  background-color: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 12px;
+  padding: 70px;
+}
+.input-wrapper {
+  font-weight: 500;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.input-wrapper > label {
+  margin-right: 15px;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
