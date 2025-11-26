@@ -4,6 +4,6 @@ import loginLimit from '../middlewares/loginLimiter.js'
 
 const router = Router()
 
-router.post('/get-login-code', loginLimit, mailController.sendLoginCode)
+router.post('/get-otp', loginLimit, mailController.sendLoginCode)
 
 export default router

@@ -1,6 +1,17 @@
 import authService from '../services/authService.js'
 import pattern from '../utils/pattern.js'
 
+const getLogin = (req, res) => {
+  const success = req.flash('success')[0] || null
+  const error = req.flash('error')[0] || null
+  res.render('login.ejs', { error: error, success: success })
+}
+
+const getRegister = (req, res) => {
+  const error = req.flash('error')[0] || null
+  res.render('register.ejs', { error: error })
+}
+
 const register = async (req, res) => {
   const email = req.body?.username?.trim()
   const password = req.body?.password?.trim()
@@ -41,4 +52,4 @@ const logOut = (req, res) => {
   })
 }
 
-export default { register, logOut }
+export default { register, logOut, getLogin, getRegister }

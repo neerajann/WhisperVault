@@ -10,7 +10,7 @@ const getForgotPassword = (req, res) => {
 const getVerifyOTP = (req, res) => {
   const error = req.flash('error')[0] || null
   const success = req.flash('success')[0] || null
-  res.render('verifyCode.ejs', { error: error, success: success })
+  res.render('verifyOTP.ejs', { error: error, success: success })
 }
 
 const getResetPassword = (req, res) => {

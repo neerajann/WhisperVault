@@ -9,7 +9,6 @@
         <div class="col-sm-8">
           <div class="card">
             <div class="card-body">
-              <!-- Makes POST request to /register route -->
               <form action="/register" method="POST">
                 <div class="form-group">
                   <label for="email">Email</label>
@@ -19,10 +18,13 @@
                   <label for="password">Password</label>
                   <input type="password" class="form-control" name="password" />
                 </div>
-                <% if (locals.error){ %>
-                <span style="color: red; display: block"
-                  ><%= locals.error %></span
+                <% if (locals.error) { %>
+                <div
+                  class="alert <%= locals.error ? 'alert-danger' : 'alert-success' %>"
+                  style="display: block"
                 >
+                  <%= locals.error %>
+                </div>
                 <% } %>
                 <button type="submit" class="btn btn-dark">Register</button>
               </form>

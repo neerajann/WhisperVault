@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <%- include('partials/header') %>
+  <body>
+    <div class="jumbotron centered">
+      <div class="container">
+        <i class="fas fa-key fa-6x"></i>
+        <h1 class="display-3">Enter verification code</h1>
+        <p class="lead">
+          Check your email and paste the code here to continue.
+        </p>
+      </div>
+    </div>
+
+    <div class="form-panel">
+      <form action="/verify-otp" method="POST">
+        <div class="form-group">
+          <label for="code">Verification code</label>
+          <input
+            required
+            type="text"
+            class="form-control"
+            id="code"
+            name="otp"
+            placeholder="1234"
+          />
+        </div>
+        <% if (locals.success || locals.error) { %>
+        <div class="container" style="max-width: 560px">
+          <div
+            class="alert <%= locals.error ? 'alert-danger' : 'alert-success' %> center-block"
+          >
+            <%= locals.error || locals.success %>
+          </div>
+        </div>
+
+        <% if (locals.success) { %>
+        <script>
+          setTimeout(() => {
+            window.location.href = '/reset-password'
+          }, 2500)
+        </script>
+        <% } %> <% } %>
+        <div class="text-right">
+          <button class="btn btn-theme">Verify</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

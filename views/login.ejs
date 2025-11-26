@@ -20,11 +20,12 @@
                   <input type="password" class="form-control" name="password" />
                 </div>
                 <% if (locals.success || locals.error) { %>
-                <span
-                  style="display: block;color:<%= locals.error ? 'red' : 'green' %>"
+                <div
+                  class="alert <%= locals.error ? 'alert-danger' : 'alert-success' %>"
+                  style="display: block"
                 >
                   <%= locals.error || locals.success %>
-                </span>
+                </div>
                 <% } %>
                 <a href="/forgot-password" style="display: block; float: right"
                   >Forgot Password</a

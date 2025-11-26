@@ -50,3 +50,127 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+:root {
+  --brand-bg: #2c3e50; /* deep slate */
+  --brand-accent: #f39c12; /* warm gold */
+  --brand-contrast: #ffffff;
+  --muted: #6c757d;
+  --page-bg: #f7f9fb;
+  --radius: 8px;
+  --shadow: 0 8px 24px rgba(13, 18, 25, 0.08);
+  --font-main: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--page-bg);
+  font-family: var(--font-main);
+  color: #222;
+}
+
+/* Jumbotron & main hero */
+.jumbotron.centered {
+  background: linear-gradient(
+    180deg,
+    rgba(44, 62, 80, 0.96),
+    rgba(44, 62, 80, 0.9)
+  );
+  color: var(--brand-contrast);
+  padding: 64px 24px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin: 24px auto;
+  max-width: 980px;
+  text-align: center;
+}
+
+/* Form container styles for consistency */
+.form-panel {
+  margin: 24px auto;
+  max-width: 560px;
+  background: #fff;
+  padding: 32px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Buttons aligned with theme */
+.btn-theme {
+  background: var(--brand-accent);
+  border-color: transparent;
+  color: #111;
+}
+.btn-theme:hover {
+  filter: brightness(0.96);
+}
+
+/* secondary light action */
+.btn-outline-theme {
+  color: var(--brand-contrast);
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  background: transparent;
+}
+
+/* secret text */
+.secret-text {
+  font-size: 1.25rem;
+  color: #fff;
+  margin: 1rem 0;
+}
+
+/* small adjustments for header icons/hero */
+.jumbotron .fa-key {
+  opacity: 0.9;
+  color: var(--brand-accent);
+}
+
+/* form inputs */
+input.form-control,
+textarea.form-control {
+  border-radius: 6px;
+  box-shadow: none;
+  border: 1px solid #e6e9ee;
+}
+label {
+  font-weight: 600;
+}
+
+/* helper */
+.center-block {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Flash / alert styles */
+.alert {
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin: 12px 0 18px 0;
+  font-weight: 600;
+  display: block;
+}
+.alert-success {
+  background: linear-gradient(
+    180deg,
+    rgba(243, 156, 18, 0.12),
+    rgba(243, 156, 18, 0.08)
+  );
+  color: #111;
+  border: 1px solid rgba(243, 156, 18, 0.14);
+}
+.alert-danger {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 76, 76, 0.08),
+    rgba(255, 76, 76, 0.04)
+  );
+  color: #b02a37;
+  border: 1px solid rgba(176, 42, 55, 0.12);
+}
+
+/* ...existing code... */
